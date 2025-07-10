@@ -1,5 +1,5 @@
 /**********
-Assignment: Lab2A
+Assignment: Lab2-A
 
 Write a program named valid.cpp, which asks the 
 user to input an integer in the range 0 < n < 100. 

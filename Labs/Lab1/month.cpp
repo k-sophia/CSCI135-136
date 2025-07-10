@@ -1,5 +1,5 @@
 /**********
-Assignment: Lab1D
+Assignment: Lab1-D
 
 Write a program named month.cpp that asks the user 
 to input the year and the month (1-12) and prints 

@@ -1,5 +1,5 @@
 /**********
-Assignment: Project 1B
+Assignment: Project1-B
 
 Write a program named calc.cpp that reads from the 
 cin a file that has a sequence of one or more non-

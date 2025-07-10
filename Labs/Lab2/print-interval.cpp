@@ -1,5 +1,5 @@
 /**********
-Assignment: Lab2B
+Assignment: Lab2-B
 
 Write a program named print-interval.cpp that asks 
 the user to input two integers L and U, representing 

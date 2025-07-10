@@ -1,5 +1,5 @@
 /**********
-Assignment: Lab1C
+Assignment: Lab1-C
 
 Write a program named leap.cpp that asks the user 
 to input an integer representing a year number 

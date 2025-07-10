@@ -1,5 +1,5 @@
 /**********
-Assignment: Lab2C
+Assignment: Lab2-C
 
 Write a program edit-array.cpp that creates an array 
 of 10 integers, and provides the user with an 

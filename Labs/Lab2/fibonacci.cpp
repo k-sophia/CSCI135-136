@@ -1,5 +1,5 @@
 /**********
-Assignment: Lab2D
+Assignment: Lab2-D
 
 Write a program named fibonacci.cpp, which uses an 
 array of ints to compute and print all Fibonacci 

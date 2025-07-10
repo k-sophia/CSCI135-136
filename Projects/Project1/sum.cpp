@@ -1,5 +1,5 @@
 /**********
-Assignment: Project 1A
+Assignment: Project1-A
 
 Write a program named sum.cpp that reads a 
 sequence of integers from cin, and reports 

@@ -1,5 +1,5 @@
 /**********
-Assignment: Lab1A
+Assignment: Lab1-A
 
 Write a program named smaller.cpp that asks the 
 user to input two integer numbers and prints out 
