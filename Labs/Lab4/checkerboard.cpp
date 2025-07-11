@@ -5,9 +5,6 @@ Write a program named checkerboard.cpp that asks
 the user to input width and height and prints a 
 rectangular checkerboard of the requested size 
 using asterisks and spaces (alternating).
-
-Print a line 'Shape:' between user input and the 
-printed shape to separate input from output.
 **********/
 
 #include <iostream>

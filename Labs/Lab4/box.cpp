@@ -6,7 +6,8 @@ input width and height and prints a solid rectangular
 box of the requested size using asterisks.
 
 Print a line 'Shape:' between user input and the 
-printed shape to separate input from output.
+printed shape to separate input from output for all
+programs in this Lab.
 **********/
 
 #include <iostream>
