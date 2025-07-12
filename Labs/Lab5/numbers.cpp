@@ -82,14 +82,17 @@ int main() {
 	cin >> upperNum;
     cout << "\n# of prime numbers within interval: " << countPrimes(lowerNum, upperNum) << endl;
     
+    /* 
     //Test nextPrime
-    /* int num2;
+    int num2;
     cout << "Enter Number: ";
     cin >> num2;
-    cout << "\nNext prime number is " << nextPrime(num2) << endl; */
+    cout << "\nNext prime number is " << nextPrime(num2) << endl; 
+    */
     
+    /* 
     //Test isPrime
-    /* int num;
+    int num;
     cout << "Enter Number: ";
     cin >> num;
     
@@ -99,10 +102,12 @@ int main() {
     }
     else {
         cout << "False\n";
-    } */
+    }
+    */
 
+    /* 
     //Test isDivisibleBy
-    /* int numerator, denominator;
+    int numerator, denominator;
     cout << "Enter Numerator: ";
     cin >> numerator;
     cout << "Enter Denominator: ";
@@ -114,5 +119,6 @@ int main() {
     }
     else {
         cout << "No\n";
-    } */
+    }
+    */
 }
