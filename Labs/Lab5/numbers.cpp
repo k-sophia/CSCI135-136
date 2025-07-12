@@ -8,6 +8,7 @@ Write a program, numbers.cpp, that defines these functions:
 -   int countPrimes(int a, int b);
 -   bool isTwinPrime(int n);
 -   int nextTwinPrime(int n);
+-   int largestTwinPrime(int a, int b);
 
 Have a main function that tests your code.
 **********/
@@ -102,13 +103,35 @@ int nextTwinPrime(int n) {
     
     return next;
 }
+/*
+    @return:    the largest twin prime in the range a ≤ N ≤ b
+                '-1' if there is no twin primes in range
+*/
+int largestTwinPrime(int a, int b) {
+    for (int i = b; i >= a; i--) {
+        if (isTwinPrime(i)) {
+            return i;
+        }
+	}
+	return -1;
+}
 
 int main() {
+    //Test largestTwinPrime
+    int lowerNum2, upperNum2;
+    cout << "Enter Lower Interval: ";
+    cin >> lowerNum2;
+    cout << "Enter Upper Interval: ";
+	cin >> upperNum2;
+    cout << "\nLargest twin prime within interval: " << largestTwinPrime(lowerNum2, upperNum2) << endl;
+
+    /* 
     //Test nextTwinPrime
     int num4; //create vars
     cout << "Enter Number: ";
     cin >> num4; //get number
     cout << "\nNext twin prime is " << nextTwinPrime(num4) << endl; 
+    */
 
     /* 
     //Test isTwinPrime
