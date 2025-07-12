@@ -4,6 +4,7 @@ Assignment: Lab5
 Write a program, numbers.cpp, that defines these functions:
 -   bool isDivisibleBy(int n, int d);
 -   bool isPrime(int n);
+-   int nextPrime(int n);
 
 Have a main function that tests your code.
 **********/
@@ -40,23 +41,46 @@ bool isPrime(int n) {
     return true;
 }
 
-int main() {
-    //Test isPrime
-    int x;
-    cout << "Enter Number: ";
-    cin >> x;
+/*
+    @return:    the smallest prime greater than n
+*/
+int nextPrime(int n) {
+    int next = n;
     
-    cout << "\nIs " << x << " a prime number: ";
-    if (isPrime(x)) {
+    if (n <= 1) {
+         return 2;
+    }
+    
+    do {
+        next = next+1;
+        isPrime(next); //use if prime function
+    } while (!isPrime(next)); //redo if not a prime number
+
+    return next;
+}
+
+int main() {
+    //Test nextPrime
+    int num2;
+    cout << "Enter Number: ";
+    cin >> num2;
+    cout << "\nNext prime number is " << nextPrime(num2) << endl;
+    
+    //Test isPrime
+    /* int num;
+    cout << "Enter Number: ";
+    cin >> num;
+    
+    cout << "\nIs " << num << " a prime number: ";
+    if (isPrime(num)) {
         cout << "True\n";
     }
     else {
         cout << "False\n";
-    }
+    } */
 
-    /*****
     //Test isDivisibleBy
-    int numerator, denominator;
+    /* int numerator, denominator;
     cout << "Enter Numerator: ";
     cin >> numerator;
     cout << "Enter Denominator: ";
@@ -68,6 +92,5 @@ int main() {
     }
     else {
         cout << "No\n";
-    }
-    *****/
+    } */
 }
