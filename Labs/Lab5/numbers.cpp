@@ -5,6 +5,7 @@ Write a program, numbers.cpp, that defines these functions:
 -   bool isDivisibleBy(int n, int d);
 -   bool isPrime(int n);
 -   int nextPrime(int n);
+-   int countPrimes(int a, int b);
 
 Have a main function that tests your code.
 **********/
@@ -45,12 +46,11 @@ bool isPrime(int n) {
     @return:    the smallest prime greater than n
 */
 int nextPrime(int n) {
-    int next = n;
-    
     if (n <= 1) {
          return 2;
     }
     
+    int next = n;
     do {
         next = next+1;
         isPrime(next); //use if prime function
@@ -59,12 +59,34 @@ int nextPrime(int n) {
     return next;
 }
 
+/*
+    @return:    the number of prime numbers in the interval a ≤ x ≤ b
+*/
+int countPrimes(int a, int b) {
+	int counter = 0;
+
+	for (int i = a; i <= b; i++) {
+        if (isPrime(i)) {
+            counter++;
+        }
+	}
+	return counter;
+}
+
 int main() {
+    //Test countPrimes
+    int lowerNum, upperNum;
+    cout << "Enter Lower Interval: ";
+    cin >> lowerNum;
+    cout << "Enter Upper Interval: ";
+	cin >> upperNum;
+    cout << "\n# of prime numbers within interval: " << countPrimes(lowerNum, upperNum) << endl;
+    
     //Test nextPrime
-    int num2;
+    /* int num2;
     cout << "Enter Number: ";
     cin >> num2;
-    cout << "\nNext prime number is " << nextPrime(num2) << endl;
+    cout << "\nNext prime number is " << nextPrime(num2) << endl; */
     
     //Test isPrime
     /* int num;
