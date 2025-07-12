@@ -6,6 +6,7 @@ Write a program, numbers.cpp, that defines these functions:
 -   bool isPrime(int n);
 -   int nextPrime(int n);
 -   int countPrimes(int a, int b);
+-   bool isTwinPrime(int n);
 
 Have a main function that tests your code.
 **********/
@@ -72,8 +73,34 @@ int countPrimes(int a, int b) {
 	}
 	return counter;
 }
+/*
+    @return:    'true' if n is a twin prime
+                'false' otherwise
+*/
+bool isTwinPrime(int n) {
+	if (isPrime(n)) { //if prime
+	    if (isPrime(n - 2) or isPrime(n + 2)) { //if a twin prime
+		    return true;
+	    }
+	}
+	return false; //not a prime or twin prime
+}
 
 int main() {
+    //Test isTwinPrime
+    int num3;
+    cout << "Enter Number: ";
+    cin >> num3;
+
+    cout << "\nIs " << num3 << " a twin prime: ";
+    if(isTwinPrime(num3)) {
+        cout << "true\n";
+    }
+    else {
+        cout << "false\n";
+    }
+
+    /* 
     //Test countPrimes
     int lowerNum, upperNum;
     cout << "Enter Lower Interval: ";
@@ -81,7 +108,8 @@ int main() {
     cout << "Enter Upper Interval: ";
 	cin >> upperNum;
     cout << "\n# of prime numbers within interval: " << countPrimes(lowerNum, upperNum) << endl;
-    
+    */
+
     /* 
     //Test nextPrime
     int num2;
