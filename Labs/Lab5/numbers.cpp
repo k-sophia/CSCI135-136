@@ -7,6 +7,7 @@ Write a program, numbers.cpp, that defines these functions:
 -   int nextPrime(int n);
 -   int countPrimes(int a, int b);
 -   bool isTwinPrime(int n);
+-   int nextTwinPrime(int n);
 
 Have a main function that tests your code.
 **********/
@@ -86,7 +87,30 @@ bool isTwinPrime(int n) {
 	return false; //not a prime or twin prime
 }
 
+/*
+    @return:    the smallest twin prime greater than n
+*/
+int nextTwinPrime(int n) {
+    if (n <= 2) {
+        return 3;
+    }
+
+	int next = n;
+	do {
+        next = nextPrime(next);
+    } while (!isTwinPrime(next)); //redo if false
+    
+    return next;
+}
+
 int main() {
+    //Test nextTwinPrime
+    int num4; //create vars
+    cout << "Enter Number: ";
+    cin >> num4; //get number
+    cout << "\nNext twin prime is " << nextTwinPrime(num4) << endl; 
+
+    /* 
     //Test isTwinPrime
     int num3;
     cout << "Enter Number: ";
@@ -99,6 +123,7 @@ int main() {
     else {
         cout << "false\n";
     }
+     */
 
     /* 
     //Test countPrimes
