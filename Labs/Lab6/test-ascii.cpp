@@ -1,5 +1,5 @@
 /**********
-Assignment: Lab5-A
+Assignment: Lab6-A
 
 Write a program named test-ascii.cpp that asks the 
 user to input a line of text (which may possibly
