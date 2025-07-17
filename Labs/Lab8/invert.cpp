@@ -1,8 +1,24 @@
+/**********
+Assignment: Lab8-A
+
+Write a new program, invert.cpp, that inverts all 
+colors, so white shades become black, and black 
+become white.
+
+Since black = 0, and white = 255, you should do the 
+following transformation for each pixel color:
+0 → 255
+1 → 254
+2 → 253
+…
+254 → 1
+255 → 0
+**********/
+
 #include <iostream>
 #include <cassert>
 #include <cstdlib>
 #include <fstream>
-
 using namespace std;
 
 const int MAX_H = 512;
@@ -89,11 +105,10 @@ int main() {
 
 	for(int row = 0; row < h; row++) {
 		for(int col = 0; col < w; col++) {
-			out[row][col] = 255 - img[row][col];
+			out[row][col] = 255 - img[row][col]; //invert color
 		}
 	}
 
 	// and save this new image to file "outImage.pgm"
 	writeImage(out, h, w);
-
 }
