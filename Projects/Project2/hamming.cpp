@@ -9,7 +9,7 @@ distance is the number of positions at which the
 two strings differ. 
 e.g.: Hamming("aactgc", "atcaga") would output 3
 
-File mutations.txt 
+File: mutations.txt 
 - Contains an even number of lines (zero-indexed) 
 - The even-numbered lines contain the original DNA sequence 
 - The odd-numbered lines contain that same sequence with substitution mutations 
