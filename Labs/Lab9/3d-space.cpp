@@ -4,6 +4,7 @@ Assignment: Lab9
 Write a program, 3d-space.cpp, that defines the function:
 -   double length(Coord3D *p);
 -   Coord3D * fartherFromOrigin(Coord3D *p1, Coord3D *p2);
+-   void move(Coord3D *ppos, Coord3D *pvel, double dt);
 
 Have a main function that tests your code.
 **********/
@@ -42,7 +43,30 @@ Coord3D * fartherFromOrigin(Coord3D *p1, Coord3D *p2) {
     return p2;
 }
 
+/*
+    Computes object’s new coordinates after the time interval dt
+    Update the object’s position ppos with its new position coordinates
+    @pps:       the position of an object
+    @pvel:      the velocity of an object
+    @dt:        time interval
+*/
+void move(Coord3D *ppos, Coord3D *pvel, double dt) {
+    ppos->x = ppos->x + pvel->x * dt; //update the object’s position ppos
+
+    ppos->y = ppos->y + pvel->y * dt;
+
+    ppos->z = ppos->z + pvel->z * dt;
+}
+
 int main() {
+    //Test move
+    Coord3D pos = {0, 0, 100.0};
+    Coord3D vel = {1, -5, 0.2};
+
+    move(&pos, &vel, 2.0); // object pos gets changed
+    cout << pos.x << " " << pos.y << " " << pos.z << endl; // prints: 2 -10 100.4
+
+    /* 
     //Test fartherFromOrigin
     Coord3D pointP = {10, 20, 30};
     Coord3D pointQ = {-20, 21, -22};
@@ -52,7 +76,8 @@ int main() {
 
     Coord3D * ans = fartherFromOrigin(&pointP, &pointQ);
    
-    cout << "ans = " << ans << endl; // So which point is farther?
+    cout << "ans = " << ans << endl;
+    */
 
     /* 
     //Test length
