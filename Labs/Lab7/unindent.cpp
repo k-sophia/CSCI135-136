@@ -1,11 +1,11 @@
 /**********
 Assignment: Lab7-A
 
-Write a program called unindent.cpp, that reads 
-input from cin and prints out each input line with 
+Write a program called unindent.cpp, that reads
+input from cin and prints out each input line with
 leading spaces removed.
 
-Make use of the function isspace defined in <cctype> 
+Make use of the function isspace defined in <cctype>
 to check if a character is a whitespace.
 **********/
 
@@ -14,8 +14,8 @@ to check if a character is a whitespace.
 using namespace std;
 
 /*
-    @line:      one line of code as input
-    @return:    code line without leading spaces and tabs
+    @line:      single line of code
+    @return:    same line with leading spaces removed
 */
 string removeLeadingSpaces(string line) {
     int len = line.length(); //get length
