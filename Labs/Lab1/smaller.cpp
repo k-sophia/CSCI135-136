@@ -1,8 +1,8 @@
 /**********
 Assignment: Lab1-A
 
-Write a program named smaller.cpp that asks the 
-user to input two integer numbers and prints out 
+Write a program named smaller.cpp that asks the
+user to input two integer numbers and prints out
 the smaller of the two.
 **********/
 
@@ -11,19 +11,17 @@ using namespace std;
 
 int main()
 {
-	int one, two; //create variables
+	int num1, num2;
+	cout << "Enter the first number: ";
+	cin >> num1;
+	cout << "Enter the second number: ";
+	cin >> num2;
 
-	cout << "Enter the first number: "; //ask for first number
-	cin >> one; //enter first number
-	
-	cout << "Enter the second number: "; //ask for second number
-	cin >> two; //enter second number
-
-	cout << endl << "The smaller of the two is "; //statement of smaller number
-
-	if (one > two) {
-		cout << two << endl; //prints second number if smaller
+	cout << endl << "The smaller of the two is ";
+	if (num1 > num2) {
+		cout << num2 << endl; //prints second number if smaller
 	}
-	else
-		cout << one << endl; //prints first number if smaller
+	else {
+		cout << num1 << endl; //prints first number if smaller
+	}
 }
