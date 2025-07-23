@@ -22,7 +22,7 @@ int main() {
     getline(cin, s); //extracts all characters until an end-of-line is reached
 
     cout << "\nOutput:\n";
-    for(int i = 0; i < s.length(); i++) { 
+    for(int i = 0; i < s.length(); i++) {
         cout << s[i] << " "; //print char
         cout << (int)s[i] << endl; //print ASCII
     }
