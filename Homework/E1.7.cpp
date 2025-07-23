@@ -1,5 +1,5 @@
 /**********
-Write a program that asks the user for three items 
+Write a program that asks the user for three items
 and print them on three separate lines.
 **********/
 

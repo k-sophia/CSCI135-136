@@ -1,6 +1,6 @@
 /**********
-Write a function named sort3(int& a, int& b, int& c), 
-that swaps its three arguments to arrange them in 
+Write a function named sort3(int& a, int& b, int& c),
+that swaps its three arguments to arrange them in
 sorted order
 **********/
 

@@ -2,10 +2,10 @@
 Define a structure Point:
 - A point had an x-coordinate and a y-corrdinate
 
-Write a double function named distance(Point a, Point b) 
+Write a double function named distance(Point a, Point b)
 that computes the distance from a to b.
 
-Write a program that reads the coordinates of the 
+Write a program that reads the coordinates of the
 points, calls your function, and displays the results.
 **********/
 

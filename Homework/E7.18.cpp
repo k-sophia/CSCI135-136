@@ -5,7 +5,7 @@ Define a structure Triangle:
 Write a function that computes the 'perimeter()' of
 a Triangle.
 
-Write a program that reads the coordinates of the 
+Write a program that reads the coordinates of the
 points, calls your function, and displays the result.
 **********/
 

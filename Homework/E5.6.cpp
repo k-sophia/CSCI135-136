@@ -11,7 +11,7 @@ using namespace std;
 
 string middle(string str) {
     string mid = "";
-    
+
     if (str.length()%2 != 0){
         mid += str[str.length()/2];
     }
@@ -19,7 +19,7 @@ string middle(string str) {
         mid += str[str.length()/2 -1];
         mid += str[str.length()/2];
     }
-        
+
     return mid;
 }
 
