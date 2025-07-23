@@ -1,7 +1,7 @@
 /**********
 Assignment: Lab8-B
 
-Write a program, invert-half.cpp, that inverts the 
+Write a program, invert-half.cpp, that inverts the
 colors only in the right half of the picture.
 **********/
 

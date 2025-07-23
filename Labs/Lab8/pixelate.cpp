@@ -1,16 +1,16 @@
 /**********
 Assignment: Lab8-F
 
-Write a program, pixelate.cpp, that pixelate the 
+Write a program, pixelate.cpp, that pixelate the
 input image.
 
-One way to pixelate an image is to effectively make 
-every 2x2 non-overlapping window contain the same 
-value (averaged over all the pixels in that window 
+One way to pixelate an image is to effectively make
+every 2x2 non-overlapping window contain the same
+value (averaged over all the pixels in that window
 of the input).
 
-For simplicity, assume that the width and the height 
-of the image are even numbers, so the picture is 
+For simplicity, assume that the width and the height
+of the image are even numbers, so the picture is
 divisible into small 2x2 squares.
 **********/
 
@@ -88,7 +88,6 @@ void writeImage(int image[MAX_H][MAX_W], int height, int width) {
 }
 
 int main() {
-
 	int img[MAX_H][MAX_W];
 	int h, w;
 
@@ -105,12 +104,12 @@ int main() {
 		for(int col = 0; col < w; col++) {
 			int avgRow = row + row;
 			int avgCol = col + col;
-            int average = (img[avgRow][avgCol] 
-							+ img[avgRow+1][avgCol] 
-							+ img[avgRow][avgCol +1] 
+            int average = (img[avgRow][avgCol]
+							+ img[avgRow+1][avgCol]
+							+ img[avgRow][avgCol +1]
 							+ img[avgRow +1][avgCol +1])
 						  /4;
-                
+
             out[avgRow][avgCol] = average;
             out[avgRow +1][avgCol] = average;
             out[avgRow][avgCol +1] = average;

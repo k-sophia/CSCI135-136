@@ -1,10 +1,10 @@
 /**********
 Assignment: Lab8-D
 
-Write a program, frame.cpp, that draws a frame (one 
+Write a program, frame.cpp, that draws a frame (one
 pixel thick) exactly in the middle of the picture.
 
-The dimensions of the frame should be 50% by 50% of 
+The dimensions of the frame should be 50% by 50% of
 the original picture’s width and height.
 **********/
 

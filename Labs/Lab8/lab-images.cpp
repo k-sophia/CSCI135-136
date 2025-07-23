@@ -7,7 +7,6 @@
 #include <cassert>
 #include <cstdlib>
 #include <fstream>
-
 using namespace std;
 
 const int MAX_H = 512;
@@ -48,7 +47,6 @@ void readImage(int image[MAX_H][MAX_W], int &height, int &width) {
 	return;
 }
 
-
 // Writes a PGM file
 // Need to provide the array data and the image dimensions
 void writeImage(int image[MAX_H][MAX_W], int height, int width) {
@@ -79,7 +77,6 @@ void writeImage(int image[MAX_H][MAX_W], int height, int width) {
 }
 
 int main() {
-
 	int img[MAX_H][MAX_W];
 	int h, w;
 
@@ -100,6 +97,5 @@ int main() {
 
 	// and save this new image to file "outImage.pgm"
 	writeImage(out, h, w);
-
 }
 

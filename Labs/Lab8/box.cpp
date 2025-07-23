@@ -1,10 +1,10 @@
 /**********
 Assignment: Lab8-C
 
-Write a program, box.cpp, that draws a white box 
+Write a program, box.cpp, that draws a white box
 exactly in the middle of the picture.
 
-The dimensions of the box should be 50% by 50% of 
+The dimensions of the box should be 50% by 50% of
 the original picture’s width and height.
 **********/
 

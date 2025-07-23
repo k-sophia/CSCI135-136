@@ -1,12 +1,12 @@
 /**********
 Assignment: Lab8-E
 
-Write a program, scale.cpp, that scales the original 
-picture to 200% of its size. 
+Write a program, scale.cpp, that scales the original
+picture to 200% of its size.
 
-It can be done by increasing the size of the picture 
-by the factor of 2, and copying each pixel of the 
-input as a small 2x2 square in the output: 
+It can be done by increasing the size of the picture
+by the factor of 2, and copying each pixel of the
+input as a small 2x2 square in the output:
 11 22    ->    11 11 22 22
 33 44          11 11 22 22
                33 33 44 44

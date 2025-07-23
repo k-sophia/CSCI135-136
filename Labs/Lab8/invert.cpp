@@ -1,11 +1,11 @@
 /**********
 Assignment: Lab8-A
 
-Write a new program, invert.cpp, that inverts all 
-colors, so white shades become black, and black 
+Write a new program, invert.cpp, that inverts all
+colors, so white shades become black, and black
 become white.
 
-Since black = 0, and white = 255, you should do the 
+Since black = 0, and white = 255, you should do the
 following transformation for each pixel color:
 0 → 255
 1 → 254
@@ -59,7 +59,6 @@ void readImage(int image[MAX_H][MAX_W], int &height, int &width) {
 	return;
 }
 
-
 // Writes a PGM file
 // Need to provide the array data and the image dimensions
 void writeImage(int image[MAX_H][MAX_W], int height, int width) {
@@ -90,7 +89,6 @@ void writeImage(int image[MAX_H][MAX_W], int height, int width) {
 }
 
 int main() {
-
 	int img[MAX_H][MAX_W];
 	int h, w;
 

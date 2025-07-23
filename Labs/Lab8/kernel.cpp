@@ -1,29 +1,29 @@
 /**********
 Assignment: Lab8-G
 
-Write a program, kernel.cpp, which implements a 
-horizontal edge detection operation. 
+Write a program, kernel.cpp, which implements a
+horizontal edge detection operation.
 
-One way to detect horizontal edges is to use the 
+One way to detect horizontal edges is to use the
 function:
 f(a,b,c,d,e,f,g,h,i) = (g+2h+i)-(a+2b+c)
 
 Remarks:
-1: 	The considered window is always a window around 
+1: 	The considered window is always a window around
 	the pixel whose value is being computed.
 
 2: 	Do not overwrite the original array.
 
-3: 	There are several ways to handle the pixels on 
-	the borders, which don’t have all 8 neighbors 
+3: 	There are several ways to handle the pixels on
+	the borders, which don’t have all 8 neighbors
 	available:
 	- assume that the non-existing neighbors are black
-	- make the boundary wrap around, or 
+	- make the boundary wrap around, or
 	- assign black color to the boundary pixels in the output
 
-4: 	If the resulting color is less than 0 or greater 
-	than 255, make them 0 and 255 respectively, 
-	otherwise writeImage function will complain that 
+4: 	If the resulting color is less than 0 or greater
+	than 255, make them 0 and 255 respectively,
+	otherwise writeImage function will complain that
 	the colors are out of range.
 **********/
 
@@ -118,11 +118,11 @@ int main() {
 			int a = img[row -1][col -1];
             int b = img[row -1][col];
             int c = img[row -1][col +1];
-			/* 
+			/*
 				no use for d,e,f
 				int d = img[row][col -1];
 				int e = img[row][col];
-				int f = img[row][col +1]; 
+				int f = img[row][col +1];
 			*/
             int g = img[row +1][col -1];
             int h = img[row +1][col];
