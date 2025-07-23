@@ -1,13 +1,13 @@
 /**********
 Assignment: Lab3-D
 
-Write a program named reverse-order.cpp which asks 
+Write a program named reverse-order.cpp which asks
 the user to input two dates:
-- earlier date 
+- earlier date
 - later date
 
-Report the West basin elevation for all days in the 
-interval in the reverse chronological order (from 
+Report the West basin elevation for all days in the
+interval in the reverse chronological order (from
 the later date to the earlier).
 **********/
 
@@ -41,12 +41,12 @@ int main()
 	string junk;        // new string variable
 	getline(fin, junk); // read one line from the file
 
-	while(fin >> date >> eastSt >> eastEl >> westSt >> westEl) {   
+	while(fin >> date >> eastSt >> eastEl >> westSt >> westEl) {
     	// this loop reads the file line-by-line
-    	// extracting 5 values on each iteration   
+    	// extracting 5 values on each iteration
 
-    	fin.ignore(INT_MAX, '\n');	//skips to the end of line, 
-                          			//ignorring the remaining columns 
+    	fin.ignore(INT_MAX, '\n');	//skips to the end of line,
+                          			//ignorring the remaining columns
 
         if (date >= start_date and date <= end_date) { //start compare
             Wdate[index] = date; //get date
@@ -56,7 +56,6 @@ int main()
 	}
 
 	for(int i = index-1; i >= 0; i--) {
-
 		cout << Wdate[i] << "  " << elevations[i] << " ft\n";
 	}
     fin.close();

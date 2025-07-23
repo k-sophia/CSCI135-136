@@ -1,13 +1,13 @@
 /**********
 Assignment: Lab3-C
 
-Write a program named compare.cpp that asks the user 
-to input two dates (the beginning and the end of 
+Write a program named compare.cpp that asks the user
+to input two dates (the beginning and the end of
 the interval).
 
-The program should check each day in the interval 
-and report which basin had higher elevation on that 
-day by printing “East” or “West”, or print “Equal” 
+The program should check each day in the interval
+and report which basin had higher elevation on that
+day by printing “East” or “West”, or print “Equal”
 if both basins are at the same level.
 **********/
 
@@ -38,12 +38,12 @@ int main()
 	string junk;        // new string variable
 	getline(fin, junk); // read one line from the file
 
-	while(fin >> date >> eastSt >> eastEl >> westSt >> westEl) {   
+	while(fin >> date >> eastSt >> eastEl >> westSt >> westEl) {
     	// this loop reads the file line-by-line
-    	// extracting 5 values on each iteration   
+    	// extracting 5 values on each iteration
 
-    	fin.ignore(INT_MAX, '\n');	//skips to the end of line, 
-                          			//ignorring the remaining columns 
+    	fin.ignore(INT_MAX, '\n');	//skips to the end of line,
+                          			//ignorring the remaining columns
 
         if (date >= start_date and date <= end_date){ //compare within date range
             if (eastEl > westEl) { // if east bigger

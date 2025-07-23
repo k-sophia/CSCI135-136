@@ -1,9 +1,9 @@
 /**********
 Assignment: Lab3-A
 
-Write a program named east-storage.cpp that asks 
-the user to input a string representing the date 
-(in MM/DD/YYYY format), and prints out the East 
+Write a program named east-storage.cpp that asks
+the user to input a string representing the date
+(in MM/DD/YYYY format), and prints out the East
 basin storage on that day.
 **********/
 
@@ -31,15 +31,15 @@ int main()
 	string junk;        // new string variable
 	getline(fin, junk); // read one line from the file
 
-	while(fin >> date >> eastSt >> eastEl >> westSt >> westEl) {   
+	while(fin >> date >> eastSt >> eastEl >> westSt >> westEl) {
     	// this loop reads the file line-by-line
-    	// extracting 5 values on each iteration   
+    	// extracting 5 values on each iteration
 
-    	fin.ignore(INT_MAX, '\n');	//skips to the end of line, 
-                          			//ignorring the remaining columns 
+    	fin.ignore(INT_MAX, '\n');	//skips to the end of line,
+                          			//ignorring the remaining columns
 
         if (date == date_check) {
-         	cout << "East basin storage: " << eastSt << " billion gallons\n";   
+         	cout << "East basin storage: " << eastSt << " billion gallons\n";
         }
 	}
 
