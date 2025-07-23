@@ -1,8 +1,8 @@
 /**********
 Assignment: Lab2-D
 
-Write a program named fibonacci.cpp, which uses an 
-array of ints to compute and print all Fibonacci 
+Write a program named fibonacci.cpp, which uses an
+array of ints to compute and print all Fibonacci
 numbers from F(0) to F(59).
 **********/
 
@@ -11,16 +11,16 @@ using namespace std;
 
 int main()
 {
-	int fib[60]; //make array
-	
+	int fib[60];
+
 	fib[0] = 0; //set first index to 0
-	cout << fib[0] << endl; //print first number
-	
+	cout << fib[0] << endl;
+
 	fib[1] = 1; //set second index to 1
-	cout << fib [1] << endl; //print second number
-	
+	cout << fib [1] << endl;
+
 	for(int i = 2; i < 60; i++) { //from F(0) to F(59)
 		fib[i] = fib[i-1] + fib[i-2]; //compute sum of two previous numbers
-		cout << fib[i] << endl; //print numbers
+		cout << fib[i] << endl;
 	}
 }

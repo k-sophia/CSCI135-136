@@ -1,9 +1,9 @@
 /**********
 Assignment: Lab2-C
 
-Write a program edit-array.cpp that creates an array 
-of 10 integers, and provides the user with an 
-interface to edit any of its elements. 
+Write a program edit-array.cpp that creates an array
+of 10 integers, and provides the user with an
+interface to edit any of its elements.
 
 Should work as follows:
 1. Create an array myData of 10 integers
@@ -21,34 +21,34 @@ using namespace std;
 
 int main()
 {
-	int myData[10];// create array
-	int i, v; //create variables 
+	int myData[10]; //array of 10 integers
+	int i, v;
 
 	for (int n = 0; n < 10; n++) {
-		myData[n] = 1;// change values to 1
+		myData[n] = 1; //change values to 1
 		cout << myData[n] << " "; //print values
 	}
-	    
+
 	cout << "\n\nInput index: "; //ask for index
-    cin >> i;// get index
+    cin >> i;
 
     cout << "Input value: "; //ask for value
-    cin >> v;//get value
+    cin >> v;
 
 	while (0<= i && i< 10) { //while within array range
 	    myData[i] = v; //update the asked cell
-	    
+
         cout << endl;
 	    for (int n = 0; n < 10; n++) { //print array elements
 		    cout << myData[n] << " ";
 	    }
-	    
+
 	    cout << "\n\nInput index: ";
         cin >> i;
 
         cout << "Input value: ";
         cin >> v;
 	}
-	
+
 	cout << "\nIndex out of range. Exit.\n";
 }

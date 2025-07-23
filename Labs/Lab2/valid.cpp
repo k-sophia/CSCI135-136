@@ -1,14 +1,14 @@
 /**********
 Assignment: Lab2-A
 
-Write a program named valid.cpp, which asks the 
-user to input an integer in the range 0 < n < 100. 
+Write a program named valid.cpp, which asks the
+user to input an integer in the range 0 < n < 100.
 
-If the number is out of range, the program should 
-keep asking to re-enter until a valid number is 
+If the number is out of range, the program should
+keep asking to re-enter until a valid number is
 input.
 
-After a valid value is obtained, print this number 
+After a valid value is obtained, print this number
 n squared.
 **********/
 
@@ -18,15 +18,15 @@ using namespace std;
 
 int main()
 {
-	int n; //create variable n
-	cout << "Please enter an integer: "; //ask for integer
-	cin >> n; //get integer
+	int n;
+	cout << "Please enter an integer: ";
+	cin >> n;
 
 	while(n <= 0 or n >= 100) { //if less than 0 or greater than 100
 		cout << "Please re-enter: "; //ask for int again
 		cin >> n; //get int again
 	}
-	
-	cout << "\nNumber squared is "; //print statement for squared 
-	cout << pow(n, 2) << endl; //show int squared
+
+	cout << "\nNumber squared is ";
+	cout << pow(n, 2) << endl; //print int squared
 }
