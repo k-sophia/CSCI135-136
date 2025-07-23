@@ -1,10 +1,12 @@
 /**********
-Assignment: Lab9
+Assignment: Lab9 A-C, E
 
 Write a program, 3d-space.cpp, that defines the function:
 -   double length(Coord3D *p);
 -   Coord3D * fartherFromOrigin(Coord3D *p1, Coord3D *p2);
 -   void move(Coord3D *ppos, Coord3D *pvel, double dt);
+-   Coord3D* createCoord3D(double x, double y, double z);
+-   void deleteCoord3D(Coord3D *p);
 
 Have a main function that tests your code.
 **********/
@@ -22,6 +24,27 @@ class Coord3D {
         double y;
         double z;
 };
+
+/*
+    Allocates memory for a Coord3D object and initializes its coordinates.
+    @x, @y, @z: coordinates to initialize point
+    @return:    Pointer to the newly created Coord3D object
+*/
+Coord3D* createCoord3D(double x, double y, double z) {
+    Coord3D *p = new Coord3D;
+    p->x = x;
+    p->y = y;
+    p->z = z;
+    return p;
+}
+
+/*
+    Deallocates memory for a Coord3D object.
+    @p:         point P passed as a pointer
+*/
+void deleteCoord3D(Coord3D *p) {
+    delete p; //free memory
+}
 
 /*
     Computes the length of the vector 
@@ -59,12 +82,32 @@ void move(Coord3D *ppos, Coord3D *pvel, double dt) {
 }
 
 int main() {
+    //Test createCoord3D and deleteCoord3D
+    double x, y, z;
+    cout << "Enter position: ";
+    cin >> x >> y >> z;
+    Coord3D *ppos = createCoord3D(x,y,z);
+    
+    cout << "Enter velocity: ";
+    cin >> x >> y >> z;
+    Coord3D *pvel = createCoord3D(x,y,z);
+
+    move(ppos, pvel, 10.0);
+
+    cout << "Coordinates after 10 seconds: " 
+         << (*ppos).x << " " << (*ppos).y << " " << (*ppos).z << endl;
+
+    deleteCoord3D(ppos); // release memory
+    deleteCoord3D(pvel);
+
+    /* 
     //Test move
     Coord3D pos = {0, 0, 100.0};
     Coord3D vel = {1, -5, 0.2};
 
     move(&pos, &vel, 2.0); // object pos gets changed
     cout << pos.x << " " << pos.y << " " << pos.z << endl; // prints: 2 -10 100.4
+    */
 
     /* 
     //Test fartherFromOrigin
