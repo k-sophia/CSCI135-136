@@ -1,12 +1,12 @@
 /**********
 Assignment: Lab6-C
 
-Write a program named vigenere.cpp that contain a 
+Write a program named vigenere.cpp that contain a
 function encryptVigenere implementing this cipher:
 -   string encryptVigenere(string plaintext, string keyword);
 
 The main function should
-1. the user enters the plaintext 
+1. the user enters the plaintext
 2. the user enters the keyword
 3. reports the ciphertext
 **********/
@@ -18,8 +18,7 @@ using namespace std;
 
 /*
     A helper function to shift one character by rshift
-    @rshift:    the magnitude of the right shift
-                assumed range: 0 ≤ rshift ≤ 25
+    @rshift:    the magnitude of the right shift (0 ≤ rshift ≤ 25)
 */
 char shiftChar(char c, int rshift) {
     char new_char;
@@ -51,13 +50,13 @@ char shiftChar(char c, int rshift) {
 
 /*
     Vigenere cipher encryption
-    @keyword:   contains only lowercase alphabetic characters (a-z)
+    @keyword:   string of lowercase alphabetic characters (a-z)
 */
 string encryptVigenere(string plaintext, string keyword) { //loop per char
     string new_text;
     string old_text = plaintext;
     string word = keyword;
- 
+
     for (int i = 0, j = 0; i < old_text.length(); ++i) {
         if (j >= word.length()) {
             j = 0;
@@ -86,5 +85,4 @@ int main() {
     cin >> keyword; //get keyword
 
     cout << "Ciphertext     : " << encryptVigenere(s, keyword) << endl; //print new text
-
 }

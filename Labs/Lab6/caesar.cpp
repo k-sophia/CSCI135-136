@@ -1,17 +1,17 @@
 /**********
 Assignment: Lab6-B
 
-Write a program named caesar.cpp with functions 
+Write a program named caesar.cpp with functions
 implementing Caesar cipher encryption:
 -   char shiftChar(char c, int rshift);
 -   string encryptCaesar(string plaintext, int rshift);
 
-Functions should preserve case, and any non-alphabetic 
+Functions should preserve case, and any non-alphabetic
 characters should be left unchanged.
 
-The main function should 
-1. ask the user to input a plaintext sentence, 
-2. ask the user to input the right shift 
+The main function should
+1. ask the user to input a plaintext sentence,
+2. ask the user to input the right shift
 3. report the ciphertext computed
 **********/
 
@@ -22,8 +22,7 @@ using namespace std;
 
 /*
     A helper function to shift one character by rshift
-    @rshift:    the magnitude of the right shift
-                assumed range: 0 ≤ rshift ≤ 25
+    @rshift:    the magnitude of the right shift (0 ≤ rshift ≤ 25)
 */
 char shiftChar(char c, int rshift) {
     char new_char;
@@ -53,8 +52,7 @@ char shiftChar(char c, int rshift) {
 
 /*
     Caesar cipher encryption
-    @rshift:    the magnitude of the right shift
-                assumed range: 0 ≤ rshift ≤ 25
+    @rshift:    the magnitude of the right shift (0 ≤ rshift ≤ 25)
 */
 string encryptCaesar(string plaintext, int rshift){
     string new_text;

@@ -1,12 +1,12 @@
 /**********
 Assignment: Lab6-D
 
-Implement two decryption functions corresponding to 
+Implement two decryption functions corresponding to
 the ciphers in Task B and C
 -   decryptCaesar(ciphertext, rshift) == plaintext
 -   decryptVigenere(ciphertext, keyword) == plaintext
 
-When decrypting ciphertext, ensure that the produced 
+When decrypting ciphertext, ensure that the produced
 decrypted string is equal to the original plaintext
 **********/
 
@@ -17,8 +17,7 @@ using namespace std;
 
 /*
     A helper function to shift one character by rshift
-    @rshift:    the magnitude of the right shift
-                assumed range: 0 ≤ rshift ≤ 25
+    @rshift:    the magnitude of the right shift (0 ≤ rshift ≤ 25)
 */
 char shiftChar(char c, int rshift) {
     char new_char;
@@ -58,8 +57,7 @@ char shiftChar(char c, int rshift) {
 
 /*
     Caesar cipher encryption
-    @rshift:    the magnitude of the right shift
-                assumed range: 0 ≤ rshift ≤ 25
+    @rshift:    the magnitude of the right shift (0 ≤ rshift ≤ 25)
 */
 string encryptCaesar(string plaintext, int rshift){
     string new_text;
@@ -75,8 +73,7 @@ string encryptCaesar(string plaintext, int rshift){
 
 /*
     Caesar cipher decryption
-    @rshift:    the magnitude of the right shift
-                assumed range: 0 ≤ rshift ≤ 25
+    @rshift:    the magnitude of the right shift (0 ≤ rshift ≤ 25)
 */
 string decryptCaesar(string ciphertext, int rshift) {
     string new_text;
@@ -92,13 +89,13 @@ string decryptCaesar(string ciphertext, int rshift) {
 
 /*
     Vigenere cipher encryption
-    @keyword:   contains only lowercase alphabetic characters (a-z)
+    @keyword:   string of lowercase alphabetic characters (a-z)
 */
 string encryptVigenere(string plaintext, string keyword) { //loop per char
     string new_text;
     string old_text = plaintext;
     string word = keyword;
- 
+
     for (int i = 0, j = 0; i < old_text.length(); ++i) {
         if (j >= word.length()) {
             j = 0;
@@ -119,13 +116,13 @@ string encryptVigenere(string plaintext, string keyword) { //loop per char
 
 /*
     Vigenere cipher decryption
-    @keyword:   contains only lowercase alphabetic characters (a-z)
+    @keyword:   string of lowercase alphabetic characters (a-z)
 */
 string decryptVigenere(string ciphertext, string keyword) {
     string new_text;
     string old_text = ciphertext;
     string word = keyword;
- 
+
     for (int i = 0, j = 0; i < old_text.length(); ++i) {
         if (j >= word.length()) {
             j = 0;
@@ -154,7 +151,7 @@ int main() {
     int shift;
     cout << "Enter shift    : ";
     cin >> shift;
-    
+
     cout << "Ciphertext     : " << encryptCaesar(s, shift) << endl;
     cout << "Decrypted      : " << decryptCaesar(encryptCaesar(s, shift), shift) << endl;
 
