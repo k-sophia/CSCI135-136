@@ -22,7 +22,7 @@ using namespace std;
 
 /*
     A helper function to shift one character by rshift
-    @rshift:    the magnitude of the right shift (0 ≤ rshift ≤ 25)
+    @param rshift:  the magnitude of the right shift (0 ≤ rshift ≤ 25)
 */
 char shiftChar(char c, int rshift) {
     char new_char;
@@ -52,7 +52,7 @@ char shiftChar(char c, int rshift) {
 
 /*
     Caesar cipher encryption
-    @rshift:    the magnitude of the right shift (0 ≤ rshift ≤ 25)
+    @param rshift:  the magnitude of the right shift (0 ≤ rshift ≤ 25)
 */
 string encryptCaesar(string plaintext, int rshift){
     string new_text;

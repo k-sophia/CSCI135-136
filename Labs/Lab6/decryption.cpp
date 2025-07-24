@@ -17,7 +17,7 @@ using namespace std;
 
 /*
     A helper function to shift one character by rshift
-    @rshift:    the magnitude of the right shift (0 ≤ rshift ≤ 25)
+    @param rshift:  the magnitude of the right shift (0 ≤ rshift ≤ 25)
 */
 char shiftChar(char c, int rshift) {
     char new_char;
@@ -57,7 +57,7 @@ char shiftChar(char c, int rshift) {
 
 /*
     Caesar cipher encryption
-    @rshift:    the magnitude of the right shift (0 ≤ rshift ≤ 25)
+    @param rshift:  the magnitude of the right shift (0 ≤ rshift ≤ 25)
 */
 string encryptCaesar(string plaintext, int rshift){
     string new_text;
@@ -73,7 +73,7 @@ string encryptCaesar(string plaintext, int rshift){
 
 /*
     Caesar cipher decryption
-    @rshift:    the magnitude of the right shift (0 ≤ rshift ≤ 25)
+    @param rshift:  the magnitude of the right shift (0 ≤ rshift ≤ 25)
 */
 string decryptCaesar(string ciphertext, int rshift) {
     string new_text;
@@ -89,7 +89,7 @@ string decryptCaesar(string ciphertext, int rshift) {
 
 /*
     Vigenere cipher encryption
-    @keyword:   string of lowercase alphabetic characters (a-z)
+    @param keyword: string of lowercase alphabetic characters (a-z)
 */
 string encryptVigenere(string plaintext, string keyword) { //loop per char
     string new_text;
@@ -116,7 +116,7 @@ string encryptVigenere(string plaintext, string keyword) { //loop per char
 
 /*
     Vigenere cipher decryption
-    @keyword:   string of lowercase alphabetic characters (a-z)
+    @param keyword: string of lowercase alphabetic characters (a-z)
 */
 string decryptVigenere(string ciphertext, string keyword) {
     string new_text;

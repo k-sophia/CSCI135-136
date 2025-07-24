@@ -18,7 +18,7 @@ using namespace std;
 
 /*
     A helper function to shift one character by rshift
-    @rshift:    the magnitude of the right shift (0 ≤ rshift ≤ 25)
+    @param rshift:  the magnitude of the right shift (0 ≤ rshift ≤ 25)
 */
 char shiftChar(char c, int rshift) {
     char new_char;
@@ -50,7 +50,7 @@ char shiftChar(char c, int rshift) {
 
 /*
     Vigenere cipher encryption
-    @keyword:   string of lowercase alphabetic characters (a-z)
+    @param keyword: string of lowercase alphabetic characters (a-z)
 */
 string encryptVigenere(string plaintext, string keyword) { //loop per char
     string new_text;
