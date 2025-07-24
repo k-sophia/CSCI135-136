@@ -1,7 +1,7 @@
 /**********
 Assignment: Project1-D
 
-Write an even better calculator program, calc3.cpp, 
+Write an even better calculator program, calc3.cpp,
 that can understand squared numbers
 
 Use a simplified notation X^ to mean X2.
@@ -23,19 +23,19 @@ int main()
             numbers = numbers*numbers;
             cin >> op; //get next operation
         }
-        
-        if (pre_op == '+') { // if +
+
+        if (pre_op == '+') {
             sum += numbers;
         }
-        else if (pre_op == '-') { //if -
+        else if (pre_op == '-') {
             sum -= numbers;
         }
-        
+
         pre_op = op; //get next operation
         cin >> numbers; //get next number
         if (op == ';') { //if end of expression
-            cout << sum << endl; //print sum
-            sum = 0; //restart
+            cout << sum << endl;
+            sum = 0; //reset sum
             pre_op = '+';
         }
     }

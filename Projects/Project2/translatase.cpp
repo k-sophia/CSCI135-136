@@ -1,13 +1,13 @@
 /**********
 Assignment: Project2-B
 
-Write a program called translatase.cpp that given 
-strands of DNA (taken from dna2b.txt), outputs to 
+Write a program called translatase.cpp that given
+strands of DNA (taken from dna2b.txt), outputs to
 the console the corresponding amino-acid chain.
 
 Dictionary file: codons.tsv
 - Contains 64 lines, each with two columns
-- In the first column are the codons 
+- In the first column are the codons
 - In the second are the corresponding amino acid
 
 Formatting rules:
@@ -25,11 +25,11 @@ Formatting rules:
 using namespace std;
 
 /*
-    read from a file that has two fields per line 
+    read from a file that has two fields per line
     where the delimiter is a space
 
-    @&dict      ifstream reference 
-    @return     reset the file pointer to the beginning for each look up
+    @param &dict:   ifstream reference
+    @return:        reset the file pointer to the beginning for each look up
 */
 string dictionary_read(ifstream &dict, string strand) {
     string codon, amino_acid, out;
@@ -79,7 +79,7 @@ string DNA_to_mRNA(string DNA) {
     for (int i = 0; i < strand; i++) { //loop for each char in strand
         RNA += DNAbase_to_mRNAbase(dna[i]); //get rna char compliment of dna char
     }
-    
+
     return RNA; //return RNA strand
 }
 
@@ -99,8 +99,8 @@ string amino_acid(ifstream &dict, string DNA) {
             result += amino;
             continue;
         }
-        
-        if (start) { 
+
+        if (start) {
             if (amino == "Stop") { //end when Stop codon found
                 break;
             }

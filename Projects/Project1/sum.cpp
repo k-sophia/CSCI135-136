@@ -1,8 +1,8 @@
 /**********
 Assignment: Project1-A
 
-Write a program named sum.cpp that reads a 
-sequence of integers from cin, and reports 
+Write a program named sum.cpp that reads a
+sequence of integers from cin, and reports
 their sum.
 **********/
 
@@ -15,8 +15,8 @@ int main()
     int sum = 0; //set sum to 0
 
     while(cin >> numbers) { //use while to go over each number
-        sum = sum + numbers; //add each number to sum
+        sum = sum + numbers;
     }
 
-    cout << sum << endl; //print total sum
+    cout << sum << endl; 
 }

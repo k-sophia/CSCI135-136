@@ -1,20 +1,19 @@
 /**********
 Assignment: Project2-D
 
-Write a program called frameshift.cpp that compares 
+Write a program called frameshift.cpp that compares
 the results of Task B with the mutated strands.
 
-File: frameshift_mutations.txt 
-- Contains the same DNA sequences of Task B on the even lines 
+File: frameshift_mutations.txt
+- Contains the same DNA sequences of Task B on the even lines
 - Contains frameshift mutations on the odd lines (0-indexed)
-- Each mutation has at most one insertion or one deletion 
+- Each mutation has at most one insertion or one deletion
 
-
-You will need to parse the strands one nucleotide at 
-a time as the “Start” codon is not a guaranteed 
+You will need to parse the strands one nucleotide at
+a time as the “Start” codon is not a guaranteed
 multiple of 3 from the begining.
 
-Your output should be the original protein on the 
+Your output should be the original protein on the
 even lines, and the mutated protein on the odd lines.
 **********/
 
@@ -26,11 +25,11 @@ even lines, and the mutated protein on the odd lines.
 using namespace std;
 
 /*
-    read from a file that has two fields per line 
+    read from a file that has two fields per line
     where the delimiter is a space
 
-    @&dict      ifstream reference 
-    @return     reset the file pointer to the beginning for each look up
+    @param &dict:   ifstream reference
+    @return:        reset the file pointer to the beginning for each look up
 */
 string dictionary_read(ifstream &dict, string strand) {
     string codon, amino_acid, out;
@@ -80,7 +79,7 @@ string DNA_to_mRNA(string DNA) {
     for (int i = 0; i < strand; i++) { //loop for each char in strand
         RNA += DNAbase_to_mRNAbase(dna[i]); //get rna char compliment of dna char
     }
-    
+
     return RNA; //return RNA strand
 }
 

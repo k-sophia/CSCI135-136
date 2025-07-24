@@ -1,12 +1,12 @@
 /**********
 Assignment: Project2-A
 
-Write a program called transcriptase.cpp that 
-1. reads a text file called dna.txt that contains one DNA strand per line 
-2. outputs to the console the corresponding mRNA strands 
+Write a program called transcriptase.cpp that
+1. reads a text file called dna.txt that contains one DNA strand per line
+2. outputs to the console the corresponding mRNA strands
 
 Each output line must
-- contain exactly one mRNA strand 
+- contain exactly one mRNA strand
 - be in capital letters
 **********/
 
@@ -18,7 +18,7 @@ Each output line must
 using namespace std;
 
 /*
-    @return:     the mRNA base complement of a DNA base
+    @return:    the mRNA base complement of a DNA base
 */
 char DNAbase_to_mRNAbase(char dna) {
     char DNA = toupper(dna); //make upper case
@@ -42,7 +42,7 @@ char DNAbase_to_mRNAbase(char dna) {
 }
 
 /*
-    @return:     the mRNA strand compliment of a DNA strand
+    @return:    the mRNA strand compliment of a DNA strand
 */
 string DNA_to_mRNA(string DNA) {
     string RNA = "";
@@ -52,7 +52,7 @@ string DNA_to_mRNA(string DNA) {
     for (int i = 0; i < strand; i++) { //loop for each char in strand
         RNA += DNAbase_to_mRNAbase(dna[i]); //get rna char compliment of dna char
     }
-    
+
     return RNA; //return RNA strand
 }
 

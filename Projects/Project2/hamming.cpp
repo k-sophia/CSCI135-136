@@ -1,24 +1,24 @@
 /**********
 Assignment: Project2-C
 
-Write a program called hamming.cpp that calculates 
-the Hamming distance between two strings. 
+Write a program called hamming.cpp that calculates
+the Hamming distance between two strings.
 
-Given two strings of equal length, the Hamming 
-distance is the number of positions at which the 
-two strings differ. 
+Given two strings of equal length, the Hamming
+distance is the number of positions at which the
+two strings differ.
 e.g.: Hamming("aactgc", "atcaga") would output 3
 
-File: mutations.txt 
-- Contains an even number of lines (zero-indexed) 
-- The even-numbered lines contain the original DNA sequence 
-- The odd-numbered lines contain that same sequence with substitution mutations 
+File: mutations.txt
+- Contains an even number of lines (zero-indexed)
+- The even-numbered lines contain the original DNA sequence
+- The odd-numbered lines contain that same sequence with substitution mutations
 
-For each pair in mutations.txt, output the Hamming 
-distance followed by “yes” or “no” whether the 
+For each pair in mutations.txt, output the Hamming
+distance followed by “yes” or “no” whether the
 substitution caused a change in structure.
 
-Remember that translation to proteins 
+Remember that translation to proteins
 - Starts at and includes with the first "Start" codon
 - Ends at and does not include the first "Stop" codon
 **********/
@@ -31,11 +31,11 @@ Remember that translation to proteins
 using namespace std;
 
 /*
-    read from a file that has two fields per line 
+    read from a file that has two fields per line
     where the delimiter is a space
 
-    @&dict      ifstream reference 
-    @return     reset the file pointer to the beginning for each look up
+    @param &dict:   ifstream reference
+    @return:        reset the file pointer to the beginning for each look up
 */
 string dictionary_read(ifstream &dict, string strand) {
     string codon, amino_acid, out;
@@ -85,7 +85,7 @@ string DNA_to_mRNA(string DNA) {
     for (int i = 0; i < strand; i++) { //loop for each char in strand
         RNA += DNAbase_to_mRNAbase(dna[i]); //get rna char compliment of dna char
     }
-    
+
     return RNA; //return RNA strand
 }
 
@@ -105,8 +105,8 @@ string amino_acid(ifstream &dict, string DNA) {
             result += amino;
             continue;
         }
-        
-        if (start) { 
+
+        if (start) {
             if (amino == "Stop") { //end when Stop codon found
                 break;
             }
@@ -142,7 +142,7 @@ int main() {
     }
 
     string strand;
-    while(getline(fin, strand)) { //gets even line of original DNA sequence 
+    while(getline(fin, strand)) { //gets even line of original DNA sequence
         string original_strand = strand;
         string original_amino = amino_acid(dict, DNA_to_mRNA(original_strand));
 
