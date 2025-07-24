@@ -1,13 +1,13 @@
 /**********
 Assignment: Lab9 D
 
-Given program, poem.cpp, the memory is allocated 
-dynamically, but it crashes your computer, because 
+Given program, poem.cpp, the memory is allocated
+dynamically, but it crashes your computer, because
 it runs out of memory really quickly.
 
-Fix this program. It should still keep creating 
-poems, but all dynamically allocated memory should 
-get deleted when it is not needed. 
+Fix this program. It should still keep creating
+poems, but all dynamically allocated memory should
+get deleted when it is not needed.
 
 The program can be stopped with Ctrl+C.
 **********/
@@ -27,6 +27,6 @@ int main() {
         p = createAPoemDynamically();
 
         // assume that the poem p is not needed at this point
-        delete p; 
+        delete p;
     }
 }
