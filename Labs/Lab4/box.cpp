@@ -1,11 +1,11 @@
 /**********
 Assignment: Lab4-A
 
-Write a program named box.cpp that asks the user to 
-input width and height and prints a solid rectangular 
+Write a program named box.cpp that asks the user to
+input width and height and prints a solid rectangular
 box of the requested size using asterisks.
 
-Print a line 'Shape:' between user input and the 
+Print a line 'Shape:' between user input and the
 printed shape to separate input from output for all
 programs in this Lab.
 **********/

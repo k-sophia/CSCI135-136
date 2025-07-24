@@ -1,7 +1,7 @@
 /**********
 Assignment: Lab4-E
 
-Write a program named upper.cpp that prints the 
+Write a program named upper.cpp that prints the
 top-right half of a square, given the side length.
 **********/
 

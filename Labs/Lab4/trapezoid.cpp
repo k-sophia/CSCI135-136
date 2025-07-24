@@ -1,10 +1,10 @@
 /**********
 Assignment: Lab4-F
 
-Write a program named trapezoid.cpp that prints an 
+Write a program named trapezoid.cpp that prints an
 upside-down trapezoid of given width and height.
 
-If the input height is impossibly large for the 
+If the input height is impossibly large for the
 given width, then print "Impossible shape!"
 **********/
 

@@ -1,7 +1,7 @@
 /**********
 Assignment: Lab4-D
 
-Write a program named lower.cpp that prints the 
+Write a program named lower.cpp that prints the
 bottom-left half of a square, given the side length.
 **********/
 

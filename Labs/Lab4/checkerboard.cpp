@@ -1,9 +1,9 @@
 /**********
 Assignment: Lab4-B
 
-Write a program named checkerboard.cpp that asks 
-the user to input width and height and prints a 
-rectangular checkerboard of the requested size 
+Write a program named checkerboard.cpp that asks
+the user to input width and height and prints a
+rectangular checkerboard of the requested size
 using asterisks and spaces (alternating).
 **********/
 
