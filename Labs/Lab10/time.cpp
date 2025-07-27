@@ -1,9 +1,10 @@
 /**********
-Assignment: Lab10-A
+Assignment: Lab10
 
 Create a program, time.cpp, that define these functions:
 -   int minutesSinceMidnight(Time time);
 -   int minutesUntil(Time earlier, Time later);
+-   Time addMinutes(Time time0, int min);
 
 Have a main function that tests your code.
 **********/
@@ -38,19 +39,49 @@ int minutesUntil(Time earlier, Time later) {
     return minutes;
 }
 
-int main() {
-    Time a, b;
-
-    cout << "Enter first time:  "; //10 30
-    cin >> a.h;
-    cin >> a.m;
+/*
+    adds a number of minutes to a given time
+    assume the result remains within the same day (≤ 23:59)
+    @return:    time object that is min minutes after time0
+*/
+Time addMinutes(Time time0, int min) {
+    int hour = 0;
+    int mins = time0.m + min;
     
+    if(mins >= 60) { //if total minutes exceed one hour
+        hour = mins/60; //get how many full hour
+        mins -= 60*hour; //subtract hours from minutes
+    }
+
+    time0.h += hour;
+    time0.m = mins;
+    return time0;
+}
+
+int main() {
+    //test addMinutes
+    Time a;
+    int minutes;
+
+    cout << "Enter time: ";
+    cin >> a.h >> a.m;
+    cout << "Minutes to add: ";
+    cin >> minutes;
+
+    a = addMinutes(a, minutes);
+    cout << "\nThe time is now " << a.h << ":" << a.m << ".\n";
+
+    /* 
+    // test minutesSinceMidnight and minutesUntil
+    Time a, b;
+    cout << "Enter first time:  "; //10 30
+    cin >> a.h >> a.m;
     cout << "Enter second time: "; //13 40
-    cin >> b.h;
-    cin >> b.m;
+    cin >> b.h >> b.m;
     
     cout << endl << "These moments of time are " << minutesSinceMidnight(a) << " and "
          << minutesSinceMidnight(b) << " minutes after midnight.\n"; 
     cout << "The interval between them is " << minutesUntil(a, b) << " minutes.\n";
+    */
 }
 
