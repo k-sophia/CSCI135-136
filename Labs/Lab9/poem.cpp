@@ -1,5 +1,5 @@
 /**********
-Assignment: Lab9 D
+Assignment: Lab9-D
 
 Given program, poem.cpp, the memory is allocated
 dynamically, but it crashes your computer, because
