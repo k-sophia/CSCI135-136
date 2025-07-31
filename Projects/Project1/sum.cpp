@@ -18,5 +18,5 @@ int main()
         sum = sum + numbers;
     }
 
-    cout << sum << endl; 
+    cout << sum << endl;
 }

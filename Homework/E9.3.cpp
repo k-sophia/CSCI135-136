@@ -1,13 +1,13 @@
 /**********
 Simulate a circuit for controlling a hallway light
 that has switched at both ends of the hallway.
-- each switch can be up or down 
+- each switch can be up or down
 - the light can be on or off
 
 Toggling either switch turns the lamp on or off.
 
 Provide and define functions:
--   int get_first_switch_state(); 
+-   int get_first_switch_state();
 -   int get_second_switch_state();
 -   int get_lamp_state();
 -   void toggle_first_switch();
@@ -75,7 +75,7 @@ void Circuit::toggle_second_switch() {
     else if (lamp_state == 1) {
         lamp_state = 0;
     }
-} 
+}
 
 int main() {
     Circuit c;
