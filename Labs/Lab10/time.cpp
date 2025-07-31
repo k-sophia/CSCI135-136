@@ -1,7 +1,7 @@
 /**********
 Assignment: Lab10
 
-Create a program named time.cpp. 
+Create a program named time.cpp.
 
 Given datatypes:
 -   class Time
@@ -19,7 +19,7 @@ Define these functions:
 -   Time addMinutes(Time time0, int min);
 -   printTimeSlot(Timeslot ts);
 -   TimeSlot scheduleAfter(TimeSlot ts, Movie nextMovie);
--   bool timeOverlap(TimeSlot ts1, TimeSlot ts2); 
+-   bool timeOverlap(TimeSlot ts1, TimeSlot ts2);
 
 Have a main function that tests your code.
 **********/
@@ -30,14 +30,14 @@ using namespace std;
 /*
     class for representing time in the 24-hour format
 */
-class Time { 
+class Time {
     public:
         int h; // Hours (0 to 23)
         int m; // Minutes (0 to 59)
 };
 
 /*
-    prints a Time object in "H:M" format (24-hour clock) 
+    prints a Time object in "H:M" format (24-hour clock)
 */
 void printTime(Time time) {
     cout << time.h << ":" << time.m;
@@ -69,7 +69,7 @@ int minutesUntil(Time earlier, Time later) {
 Time addMinutes(Time time0, int min) {
     int hour = 0;
     int mins = time0.m + min;
-    
+
     if(mins >= 60) { //if total minutes exceed one hour
         hour = mins/60; //get how many full hour
         mins -= 60*hour; //subtract hours from minutes
@@ -88,8 +88,8 @@ enum Genre {ACTION, COMEDY, DRAMA, ROMANCE, THRILLER};
 /*
     class for representing a movie
 */
-class Movie { 
-public: 
+class Movie {
+public:
     string title;
     Genre genre;     // only one genre per movie
     int duration;    // in minutes
@@ -98,8 +98,8 @@ public:
 /*
     class for representing a scheduled showing of a movie with a start time.
 */
-class TimeSlot { 
-public: 
+class TimeSlot {
+public:
     Movie movie;     // what movie
     Time startTime;  // when it starts
 };
@@ -166,7 +166,7 @@ bool timeOverlap(TimeSlot ts1, TimeSlot ts2) {
     if (time_between < 0) {
         return true;
     }
-    
+
     return false;
 }
 
@@ -176,42 +176,42 @@ int main() {
     Movie movie2 = {"Black Panther", ACTION, 134};
     Movie movie3 = {"Megamind", COMEDY, 96};
 
-    TimeSlot first = {movie1, {9, 15}};  
+    TimeSlot first = {movie1, {9, 15}};
     TimeSlot second = {movie2, {10, 30}};
     TimeSlot third = {movie3, {16, 45}};
 
     cout << "Does movie 1 and 2 overlap? "
-         << (timeOverlap(first, second) ? "Yes\n" : "No\n"); 
+         << (timeOverlap(first, second) ? "Yes\n" : "No\n");
     cout << "Does movie 2 and 3 overlap? "
-         << (timeOverlap(second, third) ? "Yes\n" : "No\n"); 
+         << (timeOverlap(second, third) ? "Yes\n" : "No\n");
 
-    /* 
+    /*
     //test scheduleAfter
     Movie movie1 = {"Coraline", THRILLER, 100};
     Movie movie2 = {"Megamind", COMEDY, 96};
 
-    TimeSlot first = {movie1, {9, 15}};  
+    TimeSlot first = {movie1, {9, 15}};
     TimeSlot second = scheduleAfter(first, movie2);
 
     printTimeSlot(first);
     printTimeSlot(second);
     */
 
-    /* 
+    /*
     //test printTimeSlot
     Movie movie1 = {"Back to the Future", COMEDY, 116};
     Movie movie2 = {"Black Panther", ACTION, 134};
 
-    TimeSlot morning = {movie1, {9, 15}};  
-    TimeSlot daytime = {movie2, {12, 15}}; 
-    TimeSlot evening = {movie2, {16, 45}}; 
+    TimeSlot morning = {movie1, {9, 15}};
+    TimeSlot daytime = {movie2, {12, 15}};
+    TimeSlot evening = {movie2, {16, 45}};
 
     printTimeSlot(morning);
     printTimeSlot(daytime);
     printTimeSlot(evening);
     */
 
-    /* 
+    /*
     //test addMinutes
     Time a;
     int minutes;
@@ -227,16 +227,16 @@ int main() {
     cout << endl;
     */
 
-    /* 
+    /*
     // test minutesSinceMidnight and minutesUntil
     Time a, b;
     cout << "Enter first time:  "; //10 30
     cin >> a.h >> a.m;
     cout << "Enter second time: "; //13 40
     cin >> b.h >> b.m;
-    
+
     cout << endl << "These moments of time are " << minutesSinceMidnight(a) << " and "
-         << minutesSinceMidnight(b) << " minutes after midnight.\n"; 
+         << minutesSinceMidnight(b) << " minutes after midnight.\n";
     cout << "The interval between them is " << minutesUntil(a, b) << " minutes.\n";
     */
 }
