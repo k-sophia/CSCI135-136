@@ -18,6 +18,7 @@ Define these functions:
 -   int minutesUntil(Time earlier, Time later);
 -   Time addMinutes(Time time0, int min);
 -   printTimeSlot(Timeslot ts);
+-   TimeSlot scheduleAfter(TimeSlot ts, Movie nextMovie);
 
 Have a main function that tests your code.
 **********/
@@ -133,7 +134,29 @@ void printTimeSlot(TimeSlot ts) {
     cout << "]" << endl;
 }
 
+/*
+    @return:    a TimeSlot for the movie nextMovie
+                scheduled immediately after the time slot ts
+*/
+TimeSlot scheduleAfter(TimeSlot ts, Movie nextMovie) {
+    TimeSlot next;
+    next.movie = nextMovie;
+    next.startTime =  addMinutes(ts.startTime, ts.movie.duration);
+    return next;
+}
+
 int main() {
+    //test scheduleAfter
+    Movie movie1 = {"Coraline", THRILLER, 100};
+    Movie movie2 = {"Megamind", COMEDY, 96};
+
+    TimeSlot first = {movie1, {9, 15}};  
+    TimeSlot second = scheduleAfter(first, movie2);
+
+    printTimeSlot(first);
+    printTimeSlot(second);
+
+    /* 
     //test printTimeSlot
     Movie movie1 = {"Back to the Future", COMEDY, 116};
     Movie movie2 = {"Black Panther", ACTION, 134};
@@ -145,6 +168,7 @@ int main() {
     printTimeSlot(morning);
     printTimeSlot(daytime);
     printTimeSlot(evening);
+    */
 
     /* 
     //test addMinutes
