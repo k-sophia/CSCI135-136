@@ -19,6 +19,7 @@ Define these functions:
 -   Time addMinutes(Time time0, int min);
 -   printTimeSlot(Timeslot ts);
 -   TimeSlot scheduleAfter(TimeSlot ts, Movie nextMovie);
+-   bool timeOverlap(TimeSlot ts1, TimeSlot ts2); 
 
 Have a main function that tests your code.
 **********/
@@ -145,7 +146,46 @@ TimeSlot scheduleAfter(TimeSlot ts, Movie nextMovie) {
     return next;
 }
 
+/*
+    @return:    true if the two time slots overlap
+                false otherwise
+*/
+bool timeOverlap(TimeSlot ts1, TimeSlot ts2) {
+    int time_between;
+    bool first_slot_earliest =  minutesSinceMidnight(ts1.startTime) < minutesSinceMidnight(ts2.startTime);
+
+    if(first_slot_earliest) {
+        Time end = addMinutes(ts1.startTime, ts1.movie.duration);
+        time_between = minutesUntil(end, ts2.startTime);
+    }
+    else {
+        Time end = addMinutes(ts2.startTime, ts2.movie.duration);
+        time_between = minutesUntil(end, ts1.startTime);
+    }
+
+    if (time_between < 0) {
+        return true;
+    }
+    
+    return false;
+}
+
 int main() {
+    //test timeOverlap
+    Movie movie1 = {"Coraline", THRILLER, 100};
+    Movie movie2 = {"Black Panther", ACTION, 134};
+    Movie movie3 = {"Megamind", COMEDY, 96};
+
+    TimeSlot first = {movie1, {9, 15}};  
+    TimeSlot second = {movie2, {10, 30}};
+    TimeSlot third = {movie3, {16, 45}};
+
+    cout << "Does movie 1 and 2 overlap? "
+         << (timeOverlap(first, second) ? "Yes\n" : "No\n"); 
+    cout << "Does movie 2 and 3 overlap? "
+         << (timeOverlap(second, third) ? "Yes\n" : "No\n"); 
+
+    /* 
     //test scheduleAfter
     Movie movie1 = {"Coraline", THRILLER, 100};
     Movie movie2 = {"Megamind", COMEDY, 96};
@@ -155,6 +195,7 @@ int main() {
 
     printTimeSlot(first);
     printTimeSlot(second);
+    */
 
     /* 
     //test printTimeSlot
