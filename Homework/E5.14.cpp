@@ -1,5 +1,5 @@
 /**********
-Write a function named sort2(int& a, int& b) that
+Write a function, sort2(int& a, int& b), that
 -   swaps the values of a and b if a is greater than b
 -   otherwise leaves a and b unchanged
 **********/

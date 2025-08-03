@@ -1,5 +1,5 @@
 /**********
-Write a function string, middle(string str) that
+Write a function, string middle(string str), that
 returns a strong continaing
 -   the middle character if the length is odd
 -   the two middle characters if the length is even

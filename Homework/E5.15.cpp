@@ -1,7 +1,7 @@
 /**********
-Write a function named sort3(int& a, int& b, int& c),
+Write a function, sort3(int& a, int& b, int& c),
 that swaps its three arguments to arrange them in
-sorted order
+sorted order.
 **********/
 
 #include <iostream>

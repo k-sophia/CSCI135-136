@@ -1,9 +1,9 @@
 /**********
-Write function named void sort2(double* p, double* q) that
+Write function, void sort2(double* p, double* q), that
 - receives two pointers
 - sorts the value sto which they point
 
-If you call sort2(&x, &y) then x <= y after the call
+If you call sort2(&x, &y) then x <= y after the call.
 **********/
 
 #include <iostream>
