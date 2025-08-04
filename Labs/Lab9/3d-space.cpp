@@ -31,9 +31,7 @@ class Coord3D {
 */
 Coord3D* createCoord3D(double x, double y, double z) {
     Coord3D *p = new Coord3D;
-    p->x = x;
-    p->y = y;
-    p->z = z;
+    *p = {x, y, z};
     return p;
 }
 
@@ -72,9 +70,7 @@ Coord3D * fartherFromOrigin(Coord3D *p1, Coord3D *p2) {
 */
 void move(Coord3D *ppos, Coord3D *pvel, double dt) {
     ppos->x = ppos->x + pvel->x * dt; //update the object’s position ppos
-
     ppos->y = ppos->y + pvel->y * dt;
-
     ppos->z = ppos->z + pvel->z * dt;
 }
 

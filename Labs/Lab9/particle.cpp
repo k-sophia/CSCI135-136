@@ -49,12 +49,7 @@ class Particle {
 */
 Particle* createParticle(double x, double y, double z, double vx, double vy, double vz) {
     Particle *p = new Particle;
-    p->x = x;
-    p->y = y;
-    p->z = z;
-    p->vx = vx;
-    p->vy = vy;
-    p->vz = vz;
+    *p = {x, y, z, vx, vy, vz};
     return p;
 }
 
@@ -75,8 +70,9 @@ Coord3D getPosition(Particle *p) {
     double y = p->y;
     double z = p->z;
 
-    Coord3D q = {x, y, z};
-    return q;
+    Coord3D *q = new Coord3D;
+    *q = {x, y, z}; //only positions
+    return *q;
 }
 
 /*
