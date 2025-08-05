@@ -20,29 +20,29 @@ void gogeta(vector<int> &goku, vector<int> &vegeta) {
 }
 
 int main() {
-    vector<int> goku = {1, 2, 3};
-    vector<int> vegeta = {4, 5};
+    vector<int> v1 = {1, 2, 3};
+    vector<int> v2 = {4, 5};
 
     cout << "Before fusion:\n";
-    cout << "Goku: ";
-    for (int i = 0; i < goku.size(); i++) {
-        cout << goku[i] << " ";
+    cout << "V1: ";
+    for (int i = 0; i < v1.size(); i++) {
+        cout << v1[i] << " ";
     }
-    cout << "\nVegeta: ";
-    for (int i = 0; i < vegeta.size(); i++) {
-        cout << vegeta[i] << " ";
+    cout << "\nV2: ";
+    for (int i = 0; i < v2.size(); i++) {
+        cout << v2[i] << " ";
     }
 
-    gogeta(goku, vegeta);
+    gogeta(v1, v2);
 
     cout << "\n\nAfter fusion (gogeta):\n";
-    cout << "Goku: ";
-    for (int i = 0; i < goku.size(); i++) {
-        cout << goku[i] << " ";
+    cout << "V1: ";
+    for (int i = 0; i < v1.size(); i++) {
+        cout << v1[i] << " ";
     }
-    cout << "\nVegeta: ";
-    for (int i = 0; i < vegeta.size(); i++) {
-        cout << vegeta[i] << " ";
+    cout << "\nV2: ";
+    for (int i = 0; i < v2.size(); i++) {
+        cout << v2[i] << " ";
     }
     cout << endl;
 }
